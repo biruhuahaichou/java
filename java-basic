@@ -1,0 +1,4 @@
+//.java编译成.class
+javac Person.java 
+//运行.class文件
+java Person
