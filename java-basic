@@ -1,4 +1,10 @@
 //.java编译成.class
 javac Person.java 
+
 //运行.class文件
 java Person
+
+//打jar包j
+jar cvf test.jar test
+//然后指定入口类，包名+类名
+Main-Class: test.Animal
