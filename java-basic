@@ -4,7 +4,13 @@ javac Person.java
 //运行.class文件
 java Person
 
-//打jar包j
+//打jar包
+//先编辑入口类 RuKou.java
+             JFrame frame=new JFrame("qq");
+             frame.setSize(400, 500);
+             frame.setVisible(true);
+             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//然后             
 jar cvf test.jar test
-//然后指定入口类，包名+类名
-Main-Class: test.Animal
+//然后指定入口类，包名+RuKou
+Main-Class: test.RuKou
