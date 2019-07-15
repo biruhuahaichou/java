@@ -1,6 +1,23 @@
-struts2常用的跳转类型
+//struts2常用的跳转类型
   redirect: 重定向到页面
   dispatcher: 转发到页面
   redirectAction: 重定向到Action
   chain: 转发到Action
   
+//拦截器
+  <interceptors></interceptors>  作用：请求封装，文件上传，国际化..
+  
+//拦截器 vs 过滤器
+   过滤器：可以过滤任何请求和响应。加入通用的代码逻辑。
+   拦截器： struts2的特有功能，只能过滤action，执行action加入通用代码
+   
+//拦截器栈
+ <interceptors-stack></interceptors-stack>
+
+//<package name="xxx" extends="struts-default" namespace="/" abstract="true"></package>
+  管理action;在同一个包下，不能有不能有同名的action
+  name随便起个名字就行，在一个项目不能出现同名的包
+  extends: 继承.
+  namesspace: 名称空间；区分不同包的访问路径；默认值"/"
+  abstract: 表示当前包是否抽象；当前包抽象，不能含有action
+
