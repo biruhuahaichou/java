@@ -3,6 +3,7 @@
   dispatcher: 转发到页面
   redirectAction: 重定向到Action
   chain: 转发到Action
+  stream: 用在下载文件的时候
   
 //拦截器
   <interceptors></interceptors>  作用：请求封装，文件上传，国际化..
@@ -20,4 +21,14 @@
   extends: 继承.
   namesspace: 名称空间；区分不同包的访问路径；默认值"/"
   abstract: 表示当前包是否抽象；当前包抽象，不能含有action
+  
+// <action name="login" class="action.LoginAction" method="execute">
+        <result name="success" type="redirect">/index.jsp</result>
+    </action>
+    
 
+//向request存放数据
+  ServletActionContext.getRequest().setAttribute("name","徐涛");
+
+//struts.xml引入其他struts.xml
+<include file="config/test.xml"></include>
