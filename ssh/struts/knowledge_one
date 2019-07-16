@@ -32,3 +32,4 @@
 
 //struts.xml引入其他struts.xml
 <include file="config/test.xml"></include>
+多个xml文件声明的顺序就是读取的顺序
