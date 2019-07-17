@@ -1,4 +1,12 @@
 struts的Action 3种使用方式
   1.正常创建类即可，不继承实现任何类和接口
-  2.继承Action类
-  3.
+  2.实现Action接口
+  3.继承ActionSupport类
+  
+ //一个模块使用一个Action
+ //  *表示路径的通配符
+  <action name="user_*" class="action.LoginAction" method="{1}">
+        <result name="{1}">/{1}.jsp</result>
+     </action>
+     
+ //多个模块使用一个Action    
