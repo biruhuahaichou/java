@@ -14,3 +14,5 @@ struts的Action 3种使用方式
         <result name="{2}">/{1}/{2}.jsp</result>
      </action>
      
+ //更改后缀,在struts.xml中
+ <constant name="struts.action.extension" value="action,do"></constant>
