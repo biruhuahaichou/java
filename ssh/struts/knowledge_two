@@ -16,3 +16,18 @@ struts的Action 3种使用方式
      
  //更改后缀,在struts.xml中
  <constant name="struts.action.extension" value="action,do"></constant>
+
+ //动态方法调用规则
+  当action中没有指定方法，可以在浏览器中输入  !方法名  来指定调用方法
+ //关闭动态方法调用，防止方法名暴露
+  <constant name="struts.enable.DynamicMethodInvocation" value="false"></constant>
+  
+  //全局配置
+  即当action中result name和jsp相同时
+  <global-results>
+   <result name="success">/login.jsp</result>
+  </global-results>
+  
+  //action注入,在struts.xml，在action中添加标签
+  <param name="">e:/images</param>
+  并在类中构建set方法
