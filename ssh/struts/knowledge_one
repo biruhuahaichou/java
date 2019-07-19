@@ -35,6 +35,9 @@
   ServletContext context=ServletActionContext.getServletContext();
 //struts2提供的域对象
   ActionContext ac=ActionContext.getContext();  用来存放Map数据
+  Map m=ac.getContextMap();
+  m.put(key,calue);
+  
 
 //struts.xml引入其他struts.xml
 <include file="config/test.xml"></include>
