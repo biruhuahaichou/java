@@ -29,6 +29,12 @@
 
 //向request存放数据
   ServletActionContext.getRequest().setAttribute("name","徐涛");
+//向session域存放数据
+  HttpSession session=ServletActionContext.getRequest().getSession(true);
+//向Context域存放数据
+  ServletContext context=ServletActionContext.getServletContext();
+//struts2提供的域对象
+  ActionContext ac=ActionContext.getContext();  用来存放Map数据
 
 //struts.xml引入其他struts.xml
 <include file="config/test.xml"></include>
