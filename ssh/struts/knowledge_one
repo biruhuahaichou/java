@@ -27,17 +27,38 @@
     </action>
     
 
-//向request存放数据
+//向request存放数据(不推荐)
   ServletActionContext.getRequest().setAttribute("name","徐涛");
 //向session域存放数据
   HttpSession session=ServletActionContext.getRequest().getSession(true);
 //向Context域存放数据
   ServletContext context=ServletActionContext.getServletContext();
-//struts2提供的域对象
+
+//struts2提供的域对象,只能在action的某个方法使用
   ActionContext ac=ActionContext.getContext();  用来存放Map数据
   Map m=ac.getContextMap();
   m.put(key,calue);
+//ac.getSession();
+//ac.getApplication();
+
+
+//struts提供的另一种域对象
+  需要implements RequestAware,implements SessionAware,implements ApplicationAware;
+  private Map<String,Object> requestMap;
+  public void setRequest(Map<String,Object> requestMap){
+    this,requestMap=requestMap;
+  }
+  requestMap.put("key","value");
   
+  private Map<String,Object> sessionMap;
+  public void setSession(Map<String,Object> session){
+    this.sessionMap=session;
+ }
+ 
+ private Map<String,Object> ContextMap;
+ public void setApplication(Map<String,Object> context){
+   this.contextMap=context;
+ }
 
 //struts.xml引入其他struts.xml
 <include file="config/test.xml"></include>
