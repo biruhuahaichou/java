@@ -33,4 +33,7 @@
   并在类中构建set方法
   
 //请求数据参数封装
+
+//自定义转换类型
+  extends StrutsTypeConverter; 在包下创建文件 javabean类名Action-conversion.properties
     
