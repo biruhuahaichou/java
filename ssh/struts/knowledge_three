@@ -1,0 +1,20 @@
+//拦截器类似过滤器的功能，过滤器是项目的任何请求；拦截器只能拦截action;拦截完action,添加过滤代码
+
+//拦截器的编写规则
+//struts2提供的Intercepter接口用于自定义拦截器
+
+<interceptors>
+	 <interceptor name="inter1" class="a_interceptor.MyInterceptor1"></interceptor>
+ </interceptors>
+<!-- 全局其作用的拦截器-->
+	  <default-interceptor-ref name="myStack"></default-interceptor-ref>	 
+	    	
+<action name="user_*" class="gz.itcast.a_interceptor.UserAction" method="{1}">
+	   <!-- 局部起作用的使用拦截器 -->
+	   <!-- <interceptor-ref name="inter1"></interceptor-ref> -->
+	   <result>/index.jsp</result>
+</action>
+
+
+//拦截器栈
+  <interceptor-stack></interceptor-stack>
