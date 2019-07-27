@@ -18,3 +18,8 @@
 
 //拦截器栈
   <interceptor-stack></interceptor-stack>
+  
+  
+//EL vs ognl
+  el表达式:只能获取数据，不能存放数据，不能调用方法
+  ognl: 可以获取数据，可以存放数据，可以调用方法
