@@ -1,0 +1,10 @@
+// jsp 9大内置对象
+   request          HttpServletRequest          请求对象
+   response         HttpServletResponse         响应对象
+   config           ServletConfig               配置对象
+   application      ServletContext              servlet上下文对象
+   session          HttpSession                 会话对象
+   exception        Throwable                   异常对象
+   this             Object                      jsp翻译后的java类
+   out              JspWriter                   代表输出对象，response.getWriter() 相当于带缓存的PrintWriter
+   pageContext      pageContext                 jsp的上下文对象
