@@ -35,6 +35,29 @@
 
 
 // 2.include
-   用于包含其他页面
+              用于包含其他页面
 
 //  3.page
+           page指令主要是用于告诉tomcat服务器如何翻译jsp文件。（jsp->java文件）
+
+
+//jsp页面出错了，可以使用
+  errorPage="/error.jsp" 跳转页面
+  使用exception对象可以查看异常信息 isErrorPage="true" <%=exception.getMessage()%>
+
+
+//web.xml文件配置全局的错误页面
+  <error-page>
+     <error-code>404</error-code>
+     <location>/error1.html</location>   
+ </error-page>
+ 
+ <error-page>
+     <error-code>500</error-code>
+     <location>/error2.jsp</location>   
+ </error-page>
+ 
+//  buffer="8kb"   --jsp页面的缓存区大小
+//  session="true"  --是否打开session功能。是否可以使用session内置对象
+//  isELIgnored="false"  --是否忽略EL表达式。false，不忽略，可以使用EL；true，不											能EL
+ 
