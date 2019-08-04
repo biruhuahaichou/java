@@ -8,3 +8,10 @@
   ${name}  
 //el表达式只能替换域对象的值，即${name} 不能替代<%name%>
   
+//  EL从指定域中获取
+       		pageScope: page域
+       		requestScope: request域
+       		sessionScope: session域
+       		applicationScope: application域
+
+        指定域获取的EL： ${pageScope.name }
