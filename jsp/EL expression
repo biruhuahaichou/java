@@ -1,0 +1,10 @@
+//el表达式 : ${ }
+
+  <% 
+    String name="徐涛";
+    pageContext.setAttribute("name","黄蒙蒙");
+  %>
+  <%=name%>
+  ${name}  
+//el表达式只能替换域对象的值，即${name} 不能替代<%name%>
+  
