@@ -30,3 +30,24 @@
      
      
  //jstl
+
+      <c:if test="${10>8}">
+    	 	<input type="submit" value="提交"/>
+      </c:if>
+      
+      <c:choose>
+    	 	<c:when test="${!empty sessionScope.user}">
+    	 		欢迎回来，你的用户名是 ：eric，<a href="">【退出登录】</a>
+    	 	</c:when>
+    	 	<c:otherwise>
+				 请先<a href="">注册</a>或<a href="">登录</a>  	 		
+    	 	</c:otherwise>
+      </c:choose>
+      
+      <c:forEach items="${list}" var="student" varStatus="varSta">
+    		序号：${varSta.count }   姓名：${student.name1 } - 密码： ${student.password }<br/>
+      </c:forEach>
+      
+       <c:forEach items="${map}" var="entry">
+    	 	 编号： ${entry.key } - 姓名:${entry.value.name1 } - 密码： ${entry.value.password }<br/>
+    	 </c:forEach>
