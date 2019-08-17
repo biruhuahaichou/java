@@ -1,0 +1,34 @@
+整体步骤：
+	1. 下载源码，引入jar文件
+	2. 写配置
+		* hibernate.cfg.xml  主配置
+		* Users.hbm.xml    映射配置	
+	3. Api 
+		Configuration   
+		SessionFactory
+		Transaction
+		Session
+		Query
+    
+  4.引入jar文件  
+     antlr-2.7.6.jar
+     commons-collections-3.1.jar
+     dom4j-1.6.1.jar
+     hibernate-jpa-2.0-api-1.0.0.Final.jar
+     hibernate3.jar 
+     javassist-3.12.0.GA.jar
+     jta-1.1.jar
+     mysql-connector-java-5.1.12-bin.jar
+     slf4j-api-1.6.1.jar
+     
+   5.
+     更新：
+	session.save(obj);    保存一个对象
+	session.update(obj)   更新一个对象, 注意修改对象的主键一定要在数据库存在!
+	session.saveOrUpdate(obj)  保存或更新
+								如果有设置主键且主键存在执行更新！
+								没有设置主键执行保存！
+    session.delete(obj)     删除一个对象; 注意修改对象的主键一定要在数据库存在!
+
+主键查询：
+	 Session.get(clazz,id);    根据主键查询
