@@ -1,1 +1,10 @@
 session缓存 也叫一级缓存
+
+让session缓存与数据库同步
+		  session.flush();
+
+清空一级指定缓存对象
+session.evict(对象);      
+
+清空一级所有缓存对象
+session.clear();
