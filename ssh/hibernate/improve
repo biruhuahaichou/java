@@ -8,3 +8,7 @@ session.evict(对象);
 
 清空一级所有缓存对象
 session.clear();
+
+hibernate为了提升效率，提供懒加载
+   true 支持懒加载
+   false 关闭懒加载
