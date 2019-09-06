@@ -1,3 +1,5 @@
+java虚拟机默认管理的内存64M
+
 //.java编译成.class
 javac Person.java 
 
