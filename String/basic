@@ -1,0 +1,6 @@
+StringBuffer 和 StringBuilder 的区别
+   StringBuffer是线程安全的；
+   StringBUffer是线程不安全的；
+
+
+线程不安全条件： 多线程 
