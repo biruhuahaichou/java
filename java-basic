@@ -16,3 +16,6 @@ java Person
 jar cvf test.jar test
 //然后指定入口类，包名+RuKou
 Main-Class: test.RuKou
+
+
+https://blog.csdn.net/qq_36903042/article/details/100798101
